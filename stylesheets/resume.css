@@ -1,0 +1,247 @@
+/* line 4, ../sass/resume.scss */
+.main {
+  display: flex;
+  overflow-x: hidden;
+}
+
+/* line 9, ../sass/resume.scss */
+#name {
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+/* line 15, ../sass/resume.scss */
+#side {
+  width: 270px;
+  position: fixed;
+  background-color: #1786e7;
+  z-index: 1;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  padding: 5%;
+}
+
+/* line 26, ../sass/resume.scss */
+.social-icons {
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+/* line 31, ../sass/resume.scss */
+#links {
+  margin-top: 20%;
+  margin-left: 15%;
+}
+
+/* line 36, ../sass/resume.scss */
+.ex {
+  width: 10px;
+  margin-left: 500px;
+}
+
+/* line 41, ../sass/resume.scss */
+.link {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 47, ../sass/resume.scss */
+.link:hover {
+  color: white;
+}
+
+/* line 51, ../sass/resume.scss */
+.project {
+  display: flex;
+  margin: 10px;
+}
+
+/* line 56, ../sass/resume.scss */
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* line 62, ../sass/resume.scss */
+a {
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+}
+
+/* line 67, ../sass/resume.scss */
+section {
+  padding: 5%;
+  width: 70%;
+  height: 70%;
+  align-self: right;
+  margin-right: 0px;
+  margin-left: 10px;
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* line 78, ../sass/resume.scss */
+.div-heading {
+  text-transform: uppercase;
+  font-family: 'Ultra', serif;
+  display: inline;
+  color: red;
+  text-decoration: underline;
+}
+
+/* line 86, ../sass/resume.scss */
+.first {
+  color: black;
+}
+
+/* line 90, ../sass/resume.scss */
+.second {
+  color: orange;
+}
+
+/* line 94, ../sass/resume.scss */
+.fab {
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 100, ../sass/resume.scss */
+  #side {
+    width: 100%;
+    height: 1%;
+  }
+
+  /* line 104, ../sass/resume.scss */
+  .info {
+    width: 100%;
+    height: 99%;
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+
+  /* line 110, ../sass/resume.scss */
+  .ex {
+    display: none;
+  }
+
+  /* line 113, ../sass/resume.scss */
+  img {
+    display: none;
+  }
+
+  /* line 116, ../sass/resume.scss */
+  section {
+    height: 100%;
+    margin: 0px 100px;
+  }
+
+  /* line 120, ../sass/resume.scss */
+  #name {
+    top: 0px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Ultra', serif;
+    font-size: 30px;
+    margin-top: -10px;
+  }
+
+  /* line 128, ../sass/resume.scss */
+  #show {
+    margin-left: 35%;
+    position: fixed;
+    font-size: 20px;
+    background-color: #1786e7;
+    color: #b3b3b3;
+    right: 0px;
+    margin-right: 10px;
+    border: 2px solid #b3b3b3;
+  }
+
+  /* line 138, ../sass/resume.scss */
+  .show {
+    height: 20%;
+    background: #1786e7;
+  }
+
+  /* line 142, ../sass/resume.scss */
+  .project {
+    display: block;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 148, ../sass/resume.scss */
+  #side {
+    width: 100%;
+    height: 1%;
+  }
+
+  /* line 152, ../sass/resume.scss */
+  .info {
+    width: 100%;
+    height: 99%;
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+
+  /* line 158, ../sass/resume.scss */
+  .ex, img {
+    display: none;
+  }
+
+  /* line 161, ../sass/resume.scss */
+  section {
+    margin-left: -5px;
+  }
+
+  /* line 164, ../sass/resume.scss */
+  .social-icons {
+    font-size: 30px;
+  }
+
+  /* line 167, ../sass/resume.scss */
+  #name {
+    top: 0px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Ultra', serif;
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  /* line 175, ../sass/resume.scss */
+  .fab {
+    font-size: 22px;
+  }
+
+  /* line 178, ../sass/resume.scss */
+  .project {
+    display: block;
+  }
+
+  /* line 181, ../sass/resume.scss */
+  #p1, #p2 {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  /* line 185, ../sass/resume.scss */
+  #show {
+    margin-left: 100px;
+    position: fixed;
+    font-size: 20px;
+    background-color: #1786e7;
+    color: #b3b3b3;
+    border: 2px solid #b3b3b3;
+  }
+
+  /* line 193, ../sass/resume.scss */
+  .show {
+    height: 20%;
+    background: #1786e7;
+  }
+}
