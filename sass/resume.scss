@@ -1,6 +1,10 @@
 @import "colors";
 @import "display";
 
+body{
+    height: 1080px;
+    width: 1920px;
+}
 .main {
     display: $side;
     overflow-x: hidden;

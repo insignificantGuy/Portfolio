@@ -142,34 +142,44 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         var i = 0;
         function show() {
             i = i + 1;
             if (i % 2 != 0) {
                 var a = document.getElementById("side");
-                a.style.height="75%";
-                var b=document.getElementsByTagName("body");
-                console.log("Show class removed")
+                a.style.height = "75%";
+                var b = document.getElementsByTagName("body");
+                var f = document.getElementById("about");
+                f.style.marginTop = "450px";
             }
             else {
                 var a = document.getElementById("side");
-                a.style.height="1%";
+                a.style.height = "1%";
+                var f = document.getElementById("about");
+                f.style.marginTop = "10px";
             }
         }
-        function onshowe(){
-            var c=document.getElementsByTagName("body");
-            if(c[0].scrollWidth<=650){
-                var d=document.getElementById("side");
-                var e=document.getElementsByClassName("main");
-                e[0].style.display="block";
-                d.style.height="1%";
-                d.style.width="100%";
+        function onshowe() {
+            var c = document.getElementsByTagName("body");
+            if (c[0].scrollWidth <= 650) {
+                var d = document.getElementById("side");
+                var e = document.getElementsByClassName("main");
+                e[0].style.display = "block";
+                d.style.height = "1%";
+                d.style.width = "100%";
             }
-            else{
-                
+            else {
+
             }
         }
-        
+        $(window).bind('resize', function (e) {
+            if (window.RT) clearTimeout(window.RT);
+            window.RT = setTimeout(function () {
+                this.location.reload(false); /* false to get page from cache */
+            }, 200);
+        });
+        window.onresize = function () { location.reload(); }
     </script>
 </body>
