@@ -1,8 +1,11 @@
 
+body{
+  height: 100%;
+  width: 100%;
+}
 /* line 4, ../sass/resume.scss */
 .main {
   display: flex;
-  overflow-x: hidden;
 }
 
 /* line 9, ../sass/resume.scss */
@@ -15,6 +18,7 @@
 /* line 15, ../sass/resume.scss */
 #side {
   width: 270px;
+  height:100%;
   position: fixed;
   background-color: #1786e7;
   z-index: 1;
@@ -53,7 +57,6 @@
 .link:hover {
   color: white;
 }
-
 /* line 51, ../sass/resume.scss */
 .project {
   display: flex;
@@ -88,10 +91,9 @@ section {
 /* line 78, ../sass/resume.scss */
 .div-heading {
   text-transform: uppercase;
-  font-family: 'Ultra', serif;
+  font-family: 'Pacifico', cursive;
   display: inline;
-  color: red;
-  text-decoration: underline;
+  color: #24f744;
 }
 
 /* line 86, ../sass/resume.scss */
@@ -160,13 +162,21 @@ section {
     color: #b3b3b3;
     right: 0px;
     margin-right: 10px;
-    border: 2px solid #b3b3b3;
+    border-style: none;
+    margin-top:-20px;
+    border:2px solid grey;
+    width: 50px;
   }
 
   /* line 138, ../sass/resume.scss */
   .show {
-    height: 20%;
+    height: 5%;
     background: #1786e7;
+  }
+  #links{
+    margin-top:30px;
+    margin-left:0px;
+    height:10%;
   }
 
   /* line 142, ../sass/resume.scss */
@@ -237,12 +247,16 @@ section {
     font-size: 20px;
     background-color: #1786e7;
     color: #b3b3b3;
-    border: 2px solid #b3b3b3;
+    border:2px solid grey;
   }
 
   /* line 193, ../sass/resume.scss */
   .show {
-    height: 20%;
+    height: 15%;
     background: #1786e7;
+  }
+  #links{
+    margin-top:30px;
+    margin-left:0px;
   }
 }
