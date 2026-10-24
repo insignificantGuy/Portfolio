@@ -1,0 +1,21 @@
+---
+import { profile } from '../data/profile';
+---
+<section id="contact" class="contact section container" aria-labelledby="contact-heading">
+  <div><p class="eyebrow accent">LET’S BUILD SOMETHING SOLID</p><h2 id="contact-heading">A good conversation.<br/>A better starting point.</h2><p>Have a backend challenge, an idea to ship, or a team worth talking to? Tell me a little about it.</p></div>
+  <div class="contact-actions"><a class="button primary" href={`mailto:${profile.email}?subject=Let%E2%80%99s%20discuss%20a%20project`}>Discuss a project <span aria-hidden="true">↗</span></a><div class="email-row"><a href={`mailto:${profile.email}`}>{profile.email}</a><button class="copy-email" type="button" data-email={profile.email} aria-label="Copy email address" title="Copy email address"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div>
+</section>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-email').forEach(button => {
+    button.addEventListener('click', async () => {
+      const status = button.closest('.contact-actions')?.querySelector('.copy-status');
+      try {
+        if (!navigator.clipboard) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(button.dataset.email || '');
+        if (status) status.textContent = 'Email copied.';
+      } catch {
+        if (status) status.textContent = 'Could not copy. Select the email address or use the email link.';
+      }
+    });
+  });
+</script>

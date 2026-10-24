@@ -1,0 +1,28 @@
+---
+interface Props { type: string; large?: boolean; }
+const { type, large = false } = Astro.props;
+---
+<div class:list={['project-visual', type, { large }]} aria-hidden="true">
+  {type === 'payment' && <div class="payment-drawing">
+    <div class="drawing-top"><span>PAYMENT ROUTING</span><span class="small-dot"></span></div>
+    <div class="flow-node entry"><span class="node-icon">↳</span> checkout.request <span class="muted">01</span></div>
+    <div class="connector vertical"></div>
+    <div class="flow-node router"><span class="node-icon">◇</span> routing engine <span class="route-badge">Go</span></div>
+    <div class="branch-lines"><span></span><span></span></div>
+    <div class="providers"><div class="flow-node provider"><span class="small-dot"></span> Provider A</div><div class="flow-node provider secondary"><span class="hollow-dot"></span> Provider B</div></div>
+    <div class="drawing-bottom"><span>idempotent by design</span><span>↗</span></div>
+  </div>}
+  {type === 'pipeline' && <div class="pipeline-drawing">
+    <div class="drawing-top"><span>EVENT PIPELINE</span><span>OBSERVABLE</span></div>
+    <div class="pipeline-row"><div class="kafka-node"><i></i><i></i><i></i><span>Kafka</span></div><span class="signal-line"></span><div class="breaker-node">⌁<span>breaker</span></div><span class="signal-line"></span><div class="worker-node"><span>▥</span><span>workers</span></div></div>
+    <div class="chart-grid"><svg viewBox="0 0 340 70" fill="none"><path d="M0 57H48L62 52L73 24L84 28L95 12L108 31L120 23L133 42L147 45L159 40L170 48H206L217 39L230 43L245 29L258 35L270 46L285 43L300 51H340" stroke="currentColor" stroke-width="2"/><path d="M0 57H48L62 52L73 24L84 28L95 12L108 31L120 23L133 42L147 45L159 40L170 48H206L217 39L230 43L245 29L258 35L270 46L285 43L300 51H340V70H0Z" fill="currentColor" opacity=".07"/></svg></div>
+    <div class="drawing-bottom"><span>backpressure · circuit breaking</span><span>↗</span></div>
+  </div>}
+  {type === 'booking' && <div class="booking-drawing">
+    <div class="drawing-top"><span>BOOKING WORKFLOW</span><span>TRANSACTIONAL</span></div>
+    <div class="calendar-head"><span>Available slots</span><span>↔</span></div>
+    <div class="calendar-days">{['M','T','W','T','F'].map((day, index)=><div class:list={[{ 'active-day': index===2 }]}><span>{day}</span><strong>{12+index}</strong></div>)}</div>
+    <div class="slots"><span>09:00</span><span class="selected-slot">10:30 <b>✓</b></span><span>14:00</span></div>
+    <div class="drawing-bottom"><span>row lock → validate → commit</span><span>↗</span></div>
+  </div>}
+</div>

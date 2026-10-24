@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Contact from '../../components/Contact.astro';
+import { projects } from '../../data/projects';
+---
+<Base title="Engineering Projects — Rahul Negi" description="Explore fastPay, Flowguard, and Slotly: independent backend projects covering payment routing, Kafka resilience, and transactional booking systems.">
+<section class="container page-intro"><p class="eyebrow accent">THE WORK / INDEPENDENT PROJECTS</p><h1>Built to be<br/><span>looked inside.</span></h1><p>Three systems. Three different problems. A closer look at the architecture, the decisions, and the boundaries of each implementation.</p></section>
+<section class="container project-index" aria-label="Project case studies"><div class="project-grid">{projects.map((project,index)=><ProjectCard project={project} index={index}/>)}</div><p class="project-note mono">Independent work. Employer systems and proprietary implementation details are not included.</p></section><Contact/>
+</Base>

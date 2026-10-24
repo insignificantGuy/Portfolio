@@ -1,0 +1,9 @@
+{
+  "checkedOn": "2026-10-24",
+  "links": [
+    {"url":"https://github.com/insignificantGuy/fastPay","status":200},
+    {"url":"https://github.com/insignificantGuy/Flowguard","status":200},
+    {"url":"https://github.com/insignificantGuy/Slotly","status":"Public page retrieved; documentation differs from local implementation"},
+    {"url":"https://tezzpay.up.railway.app/v1/healthy","status":200}
+  ]
+}

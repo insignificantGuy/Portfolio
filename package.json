@@ -1,0 +1,24 @@
+{
+  "name": "rahul-negi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build && node scripts/validate.mjs && node scripts/test-contact.mjs",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "test": "node scripts/validate.mjs && node scripts/test-contact.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.16.0",
+    "@fontsource-variable/manrope": "^5.2.0",
+    "@fontsource/ibm-plex-mono": "^5.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.0",
+    "lighthouse": "^13.0.0",
+    "@playwright/test": "^1.56.0"
+  }
+}

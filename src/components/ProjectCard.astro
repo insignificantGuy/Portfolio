@@ -1,0 +1,14 @@
+---
+import type { Project } from '../data/projects';
+import ProjectVisual from './ProjectVisual.astro';
+interface Props { project: Project; index: number; }
+const { project: p, index } = Astro.props;
+---
+<article class="project-card">
+  <a class="visual-link" href={`/projects/${p.slug}/`} tabindex="-1" aria-hidden="true"><ProjectVisual type={p.visual} /></a>
+  <div class="project-card-body"><div class="eyebrow"><span>0{index + 1}</span><span>{p.category}</span></div>
+    <h3><a href={`/projects/${p.slug}/`}>{p.name}<span aria-hidden="true">↗</span></a></h3>
+    <p>{p.summary}</p><ul class="tags" aria-label="Technologies">{p.stack.map(s=><li>{s}</li>)}</ul>
+    <a class="text-link case-link" href={`/projects/${p.slug}/`}>Explore case study <span aria-hidden="true">→</span></a>
+  </div>
+</article>
